@@ -16,7 +16,7 @@ const UglyComponent = styled.div`
 
 ```javascript
 // Less ugly theme accessing
-const UglyComponent = styled.div`
+const LessUglyComponent = styled.div`
   background-color: ${color`main.light`};
   color: ${color`main.dark`};
 `
