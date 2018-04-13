@@ -1,0 +1,26 @@
+{
+  "name": "themmer",
+  "version": "1.0.0",
+  "description": "Easily access theme props in styled-components",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "parcel ./src/index.html"
+  },
+  "keywords": [
+    "js",
+    "styled-components",
+    "theme",
+    "css"
+  ],
+  "author": "elcoosp",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.7.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "dependencies": {
+    "styled-components": "^3.2.5"
+  }
+}
