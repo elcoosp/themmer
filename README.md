@@ -45,11 +45,11 @@ const theme = {
 
 // Export with your theme
 // Return an object with a getter for each key (one level  deep) in your theme
-const themeAccesssor = themmer(theme)
+const themeAccessor = themmer(theme)
 
 module.exports = {
   theme,
-  themeAccesssor
+  themeAccessor
 }
 ```
 
@@ -57,8 +57,8 @@ module.exports = {
 
 ```javascript
 import styled from 'styled-components'
-import { themeAccesssor } from '../path/to/theme'
-const { color } = themeAccesssor
+import { themeAccessor } from '../path/to/theme'
+const { color } = themeAccessor
 
 // Less ugly theme accessing
 const LessUglyComponent = styled.div`
