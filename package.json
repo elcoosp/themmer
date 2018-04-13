@@ -5,8 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "test:cov": "jest --coverage",
-    "start": "parcel ./src/index.html"
+    "test:cov": "jest --coverage"
   },
   "keywords": ["js", "styled-components", "theme", "css"],
   "author": "elcoosp",
