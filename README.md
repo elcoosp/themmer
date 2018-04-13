@@ -2,6 +2,10 @@
 
 Easily access theme prop in styled-components
 
+## Install
+
+`npm i -S themmer`
+
 ## Why
 
 ```javascript

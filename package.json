@@ -9,7 +9,12 @@
     "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
   },
-  "keywords": ["js", "styled-components", "theme", "css"],
+  "keywords": [
+    "js",
+    "styled-components",
+    "theme",
+    "css"
+  ],
   "author": "elcoosp",
   "license": "MIT",
   "homepage": "https://github.com/elcoosp/themmer",
