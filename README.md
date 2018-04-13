@@ -8,7 +8,6 @@ import { render } from 'react-dom'
 import styled, { ThemeProvider } from 'styled-components'
 import { themmer } from 'themmer'
 
-
 const theme = {
   color: {
     main: {
@@ -26,9 +25,7 @@ const { color } = themeAccesssor
 
 const UglyComponent = styled.div`
   background-color: ${color`main.light`};
-  ${ /* 'red' */}
   color: ${color`main.dark`};
-  ${ /* 'dark-red' */}
 `
 
 const App = () => (
