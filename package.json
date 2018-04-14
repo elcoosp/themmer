@@ -1,6 +1,6 @@
 {
   "name": "themmer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Easily access theme props in styled-components",
   "main": "lib/index.js",
   "scripts": {
@@ -9,12 +9,7 @@
     "prepare": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
   },
-  "keywords": [
-    "js",
-    "styled-components",
-    "theme",
-    "css"
-  ],
+  "keywords": ["js", "styled-components", "theme", "css"],
   "author": "elcoosp",
   "license": "MIT",
   "homepage": "https://github.com/elcoosp/themmer",
