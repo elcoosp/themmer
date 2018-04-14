@@ -21,8 +21,8 @@ const UglyComponent = styled.div`
 ```javascript
 // Less ugly theme accessing
 const LessUglyComponent = styled.div`
-  background-color: ${color`main.light`};
-  color: ${color`main.dark`};
+  background-color: ${color.main.light};
+  color: ${color.main.dark};
 `
 ```
 
@@ -38,14 +38,14 @@ const theme = {
   color: {
     main: {
       light: 'red',
-      dark: 'dark-red'
+      dark: 'blue'
     }
   }
 }
 
 // Export with your theme
 // return an object with a getter
-// for each key in your theme (one level  deep)
+// for each key in your theme
 const themeAccessor = themmer(theme)
 
 export default {
@@ -64,7 +64,7 @@ const { color } = themeAccessor
 
 // Less ugly theme accessing
 const LessUglyComponent = styled.div`
-  background-color: ${color`main.light`};
-  color: ${color`main.dark`};
+  background-color: ${color.main.light};
+  color: ${color.main.dark};
 `
 ```
