@@ -44,7 +44,7 @@ const theme = {
 }
 
 // Export with your theme
-// eturn an object with a getter
+// return an object with a getter
 // for each key in your theme (one level  deep)
 const themeAccessor = themmer(theme)
 
