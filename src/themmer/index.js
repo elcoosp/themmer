@@ -1,10 +1,16 @@
-const findPath = s => o => s.split('.').reduce((a, k) => a[k], o)
+const isObj = o => o !== null && typeof o === 'object'
 
-const createGetter = (acc, key) => ({
-  ...acc,
-  [key]: ([path]) => props => findPath(path)(props.theme[key])
-})
+const recurse = f => o =>
+  Object.entries(o).reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: isObj(value) ? recurse(f)(value) : f(value)
+    }),
+    {}
+  )
 
-const themmer = theme => Object.keys(theme).reduce(createGetter, {})
+const makeGetter = value => props => value
+
+const themmer = theme => recurse(makeGetter)(theme)
 
 module.exports = themmer
