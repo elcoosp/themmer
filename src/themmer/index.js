@@ -1,16 +1,12 @@
-const isObj = o => o !== null && typeof o === 'object'
+const path = obj => (...arrOfKeys) =>
+  arrOfKeys.reduce((acc, key) => acc[key], obj)
+const tm = ([pathDotNotation]) => props => {
+  const result = path(props.theme)(...pathDotNotation.split('.'))
+  if (!result)
+    throw new Error(
+      `Could not access ${pathDotNotation} on props.theme, it is undefined`
+    )
+  else return result
+}
 
-const recurse = f => o =>
-  Object.entries(o).reduce(
-    (acc, [key, value]) => ({
-      ...acc,
-      [key]: isObj(value) ? recurse(f)(value) : f(value)
-    }),
-    {}
-  )
-
-const makeGetter = value => props => value
-
-const themmer = theme => recurse(makeGetter)(theme)
-
-module.exports = themmer
+module.exports = tm
