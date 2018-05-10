@@ -1,5 +1,7 @@
 # Themmer
 
+[![Build Status](https://travis-ci.org/elcoosp/themmer.svg?branch=master)](https://travis-ci.org/elcoosp/themmer)
+
 Easily access theme prop in styled-components
 
 ## Install
