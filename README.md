@@ -19,52 +19,10 @@ const UglyComponent = styled.div`
 ## What
 
 ```javascript
+import tm from 'themmer'
 // Less ugly theme accessing
 const LessUglyComponent = styled.div`
-  background-color: ${color.main.light};
-  color: ${color.main.dark};
-`
-```
-
-## How
-
-### ../path/to/theme
-
-```javascript
-import styled from 'styled-components'
-import { themmer } from 'themmer'
-
-const theme = {
-  color: {
-    main: {
-      light: 'red',
-      dark: 'blue'
-    }
-  }
-}
-
-// Export with your theme
-// return an object with a getter
-// for each key in your theme
-const themeAccessor = themmer(theme)
-
-export default {
-  theme,
-  themeAccessor
-}
-```
-
-### ../path/to/LessUglyComponent
-
-```javascript
-import styled from 'styled-components'
-import { themeAccessor } from '../path/to/theme'
-
-const { color } = themeAccessor
-
-// Less ugly theme accessing
-const LessUglyComponent = styled.div`
-  background-color: ${color.main.light};
-  color: ${color.main.dark};
+  background-color: ${tm`color.main.light`};
+  color: ${tm`color.main.dark`};
 `
 ```
