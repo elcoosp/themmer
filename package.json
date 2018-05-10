@@ -4,7 +4,7 @@
   "description": "Easily access theme props in styled-components",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
     "test:cov": "jest --coverage",
     "prepare": "node_modules/babel-cli/bin/babel.js src --out-dir lib  && minify lib -d lib",
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib  && minify lib -d lib"
