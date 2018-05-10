@@ -1,6 +1,6 @@
 {
   "name": "themmer",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Easily access theme props in styled-components",
   "main": "lib/index.js",
   "scripts": {
