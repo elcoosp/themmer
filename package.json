@@ -6,15 +6,12 @@
   "scripts": {
     "test": "jest --watchAll",
     "test:cov": "jest --coverage",
-    "prepare": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
-    "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    "prepare":
+      "node_modules/babel-cli/bin/babel.js src --out-dir lib  && minify lib -d lib",
+    "build":
+      "node_modules/babel-cli/bin/babel.js src --out-dir lib  && minify lib -d lib"
   },
-  "keywords": [
-    "js",
-    "styled-components",
-    "theme",
-    "css"
-  ],
+  "keywords": ["js", "styled-components", "theme", "css"],
   "author": "elcoosp",
   "license": "MIT",
   "homepage": "https://github.com/elcoosp/themmer",
@@ -22,6 +19,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-minify": "^0.4.1",
     "babel-preset-env": "^1.6.1",
     "jest": "^22.4.3"
   },
