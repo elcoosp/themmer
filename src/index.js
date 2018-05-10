@@ -7,7 +7,7 @@ const themmer = strTemplate => props => {
 
   if (!result)
     throw new Error(
-      `Could not access ${pathDotNotation} on props.theme, it is undefined`
+      `Could not access ${strTemplate[0]} on props.theme, it is undefined`
     )
   else return result
 }
